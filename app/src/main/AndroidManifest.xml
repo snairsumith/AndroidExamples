@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sumith.androidexamples" >
+    package="com.example.sumith.androidexamples">
 
     <application
-        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCgX1pitu0f8qGk3tJt3SVzbvR8qhX0I4k" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+        <activity
+            android:name="com.gpslocations.Curentlocations"
+            android:label="@string/app_name">
+
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/title_activity_curentlocations">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.gpslocations.Curentlocations"
-            android:label="@string/title_activity_curentlocations" >
         </activity>
     </application>
 
